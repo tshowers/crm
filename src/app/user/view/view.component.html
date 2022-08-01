@@ -1,0 +1,46 @@
+<div class="container-fluid mt-3">
+      <div class="row">
+            <div class="col-md">
+                  <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.displayName"><strong>Display Name:</strong> {{data.displayName}}</span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="data && !data.displayName">No display name</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onDisplayName()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.firstName"><strong>First Name:</strong> {{data.firstName}}</span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="data && !data.firstName">No first name</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onFirstName()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.middleName"><strong>Middle Name:</strong> {{data.middleName}}</span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="data && !data.middleName">No middle name</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onMiddleName()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.lastName"><strong>Last Name:</strong> {{data.lastName}}</span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="data && !data.lastName">No last name</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onLastName()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                  </ul>
+                  <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.emails && data.emails.length && (data.emails.length > 0)"><strong>Email:</strong><br>
+                                    <span *ngFor="let e of data.emails; let i = index"> {{i+1}} - <a href="mailto:{{e.emailAddress}}">{{e.emailAddress}}</a> <br>
+                                    </span>
+                              </span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="!(data && data.emails && data.emails.length && (data.emails.length > 0))">No email addresses</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onEmailAddress()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                  </ul>
+                  <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center wow fadeIn">
+                              <span class="p-2">Diagnostic </span>
+                              <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" [checked]="isDiagnostic" (click)="setDiagnostic()">
+                              </div>
+                        </li>
+                  </ul>
+            </div>
+      </div>
+</div>

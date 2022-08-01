@@ -1,0 +1,41 @@
+<app-menu></app-menu>
+<div class="container-fluid">
+    <div class="row mb-2">
+        <div class="col-md">
+            <span *ngIf="!isEditMode" (click)="back()" style="cursor: pointer;">
+                <i class="fa fa-chevron-left  fa-2x text-muted"></i>
+            </span>
+            <span *ngIf="isEditMode" (click)="list()" style="cursor: pointer">
+                <i class="fa fa-chevron-left  fa-2x text-muted"></i>
+            </span>
+        </div>
+        <div class="col-md text-center">
+            <h1>Contacts</h1>
+        </div>
+        <div class="col-md text-end">
+            <button type="button" class="btn btn-success" (click)="onDashboard()">Dashboard</button>
+            <button type="button" class="btn btn-primary" (click)="onNew()">Create</button>
+        </div>
+    </div>
+    <div class="row" *ngIf="!isEditMode">
+        <div class="col-md-12 no-print">
+            <app-list (id)="onView($event)"></app-list>
+        </div>
+    </div>
+    <div class="row" *ngIf="isEditMode">
+        <div class="col-md-6">
+            <app-view [data]="data" [isDiagnostic]="isDiagnostic" (editItem)="onEdit($event)"></app-view>
+        </div>
+        <div class="col-md-6">
+            <app-display-name [data]="data" *ngIf="isDisplayName" (done)="editReset()"></app-display-name>
+            <app-first-name [data]="data" *ngIf="isFirstName" (done)="editReset()"></app-first-name>
+            <app-middle-name [data]="data" *ngIf="isMiddleName" (done)="editReset()"></app-middle-name>
+            <app-last-name [data]="data" *ngIf="isLastName" (done)="editReset()"></app-last-name>
+            <app-email-address [data]="data" *ngIf="isEmail" (done)="editReset()"></app-email-address>
+            <pre class="text-light bg-dark p-4" *ngIf="isDiagnostic">
+                {{data | json}}
+            </pre>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
