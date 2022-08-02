@@ -1,143 +1,123 @@
 <div id="page" class="site">
-
-	<!-- Start Header --> 
+	<!-- Start Header -->
 	<header id="masthead" class="site-header">
-        <nav id="site-navigation" class="navbar main-navigation nav-light navbar-top menu-chill">
-            <div class="container-fluid container-nav nav-no-shadow">
-                <div class="container">
-                    <!-- Top menu buttons -->
-                    <div class="menu-buttons">
-                        <ul>
-                            <li><a href="https://www.taliferro.com/#process" class="button button-simple" title="link">Process</a></li>
-                            <li><a href="https://www.taliferro.com/#products" class="button button-simple" title="link">Products</a></li>
-                            <li><a href="https://www.taliferro.com/#services" class="button button-simple" title="link">Services</a></li>
-                            <li><a href="https://www.taliferro.com/#about" class="button button-simple" title="link">About</a></li>
-                        </ul>
-                    </div>
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <a class="navbar-brand" routerLink="/">Taliferro Group
-                            <img src="https://www.taliferro.com/assets/images/taliferro-group-logo-small.png" alt="Taliferro Group"  class="d-inline-block align-text-bottom">
-                        </a>
-                    </div>
-                </div> <!-- .container -->
-            </div> <!-- .container-fluid -->
-        </nav>
-
+		<nav class="navbar navbar-expand-lg" style="background-color: white;">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="https://www.taliferro.com">
+					<img src="https://www.taliferro.com/assets/images/taliferro-group-logo.png" alt="" width="48" height="48" class="d-inline-block align-text-top"> Taliferro Group </a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="https://www.taliferro.com/#products">Products</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://www.taliferro.com/#services">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://www.taliferro.com/#about">About</a>
+						</li>
+					</ul>
+					<span class="navbar-text"> 425.305.3748 </span>
+				</div>
+			</div>
+		</nav>
 		<!-- Start Navigation -->
-
 		<div class="container-fluid header-content-9 header-content-white">
 			<div class="container header-container header-9">
 				<div class="row">
-
 					<div class="title-centered-content">
 						<div class="col-md-6 header-text">
 							<h1>A true Customer Relationship Management System</h1>
-
 							<div class="title-desc">
-								<p>The connection between a company and its customers holds the greatest potential for untapped revenue. Regardless of company size, its customer relationship management system is the key to success.</p>
-
-                                    <p>The companies who do it well succeed and the ones who don't struggle.</p>
+								<p>The connection between a company and its customers holds the greatest potential for untapped revenue. Regardless of company size, its customer relationship
+									management system is the key to success.</p>
+								<p>The companies who do it well succeed and the ones who don't struggle. So imagine a system where the CRM recommends to you who you should contact, when, and why.</p>
 							</div>
-
 							<ul class="header-nav-buttons">
-								<li><a routerLink="/under-construction" class="button button-full" title="Try It">Try It</a></li>
+								<li><a (click)="onTryIt()" class="button button-full" title="Preview">Preview</a></li>
 								<li><a href="#more" class="button button-border" title="Read More">Read More</a></li>
 							</ul>
-
 						</div> <!-- .header-text -->
-
-						
 					</div> <!-- .title-centered-content -->
-
 				</div> <!-- .row -->
-			</div> <!-- .container --> 
-		</div> <!-- .container-fluid --> 
-
+			</div> <!-- .container -->
+		</div> <!-- .container-fluid -->
 	</header>
-	<!-- End Header --> 
+	<!-- End Header -->
+	<a name="more"></a>
 
 	<div id="content" class="site-content">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
-
 				<!-- Start Features 2 -->
 				<section id="features---2" class="container-fluid section-block features">
 					<div class="container">
 						<div class="row">
-
 							<h2>Deepen Customer Relationships with a flexible CRM System</h2>
 							<div class="block-desc">
-								<p>Our CRM makes the right information available to the right people at the right time. Now, more than ever, companies are investing in customer service tools because inadequate customer contact systems undermine the customer relationship. Effective customer relationship management is only as good as the system it's founded on.</p>
+								<p>Our CRM makes the right information available to the right people at the right time. Now, more than ever, companies are investing in customer service tools because
+									inadequate customer contact systems undermine the customer relationship. Effective customer relationship management is only as good as the system it's founded on.
+								</p>
 							</div>
-
 							<!-- Feature 1 -->
 							<div class="col-md-4 feature feature-center feature-second-color feature-border">
 								<i class="icon-pin"></i>
 								<h3>Relationships</h3>
 								<p>Everything related to the customer right at your fingertips.</p>
 							</div>
-
 							<!-- Feature 2 -->
 							<div class="col-md-4 feature feature-center feature-second-color feature-border">
 								<i class="icon-arrow-down"></i>
 								<h3>Funnels</h3>
 								<p> Simply add one of our customizable forms to a web site and all customer data will be automatically added to the your CRM.</p>
 							</div>
-
 							<!-- Feature 3 -->
 							<div class="col-md-4 feature feature-center feature-second-color feature-border">
 								<i class="icon-call-out"></i>
-									<h3>Push</h3>
+								<h3>Push</h3>
 								<p>This CRM suggests who you should be contacting and why. No more neglected customers costing you revenue.</p>
 							</div>
-
 						</div> <!-- .row -->
 					</div> <!-- .container -->
 				</section>
 				<!-- End Features 2 -->
-
 				<!-- Start About Block 1 -->
 				<section id="about---1" class="container-fluid section-block about-1 color-block">
 					<div class="container">
 						<div class="row">
-
 							<div class="col-md-6 col-sm-5 col-xs-12 about-text">
 								<h2>Focus on the Most Profitable Opportunities </h2>
-								<p>Tap into hidden profits and bring unseen revenue opportunities to the surface - see real-time snapshots of exactly what the sales team is doing, the number of leads each person generated, the quality of leads in $ value, and the probability of each opportunity.</p>
+								<p>Tap into hidden profits and bring unseen revenue opportunities to the surface - see real-time snapshots of exactly what the sales team is doing, the number of leads
+									each person generated, the quality of leads in $ value, and the probability of each opportunity.</p>
 								<a href="tel:425.305.3748" class="button button-full" title="button">Arrange a Test Drive</a>
 							</div>
-
 							<div class="col-md-6 col-sm-7 col-xs-12">
 								<div class="about-features">
-
 									<!-- Feature block 1 -->
 									<div class="feature-box feature-box-primary">
 										<i class="icon-refresh"></i> <!-- icon -->
 										<p>Customer Retention</p>
 									</div>
-
 									<!-- Feature block 2 -->
 									<div class="feature-box feature-box-primary">
 										<i class="icon-cursor"></i> <!-- icon -->
 										<p>Pre-sales Tracking</p>
 									</div>
-
 									<!-- Feature block 3 -->
 									<div class="feature-box feature-box-primary">
 										<i class="icon-magic-wand"></i> <!-- icon -->
 										<p>Immediate Awareness</p>
 									</div>
-
 									<!-- Feature block 4 -->
 									<div class="feature-box feature-box-second">
 										<i class="icon-layers"></i> <!-- icon -->
 										<p>Organizes Leads </p>
 									</div>
-
 								</div> <!-- .about-features -->
 							</div>
-
 						</div> <!-- .row -->
 					</div> <!-- .container -->
 				</section>
@@ -147,118 +127,96 @@
 					<div class="overlay"></div>
 					<div class="container">
 						<div class="row">
-
 							<div class="col-md-8 download-center-text">
 								<h2>Questions?</h2>
 								<p>Don't hesitate to contact us if you have any questions.</p>
-                                <a href="tel:425.305.3748" class="button button-full">Request a Demo</a>
-
+								<a href="tel:425.305.3748" class="button button-full">Request a Demo</a>
 							</div>
-
 						</div> <!-- .row -->
 					</div> <!-- .container -->
 				</section>
 				<!-- End Download 2 -->
-
 				<!-- Start About Block 2 -->
 				<section id="about---2" class="container-fluid section-block about-2">
 					<div class="container">
 						<div class="row">
-
 							<div class="col-md-6 col-sm-7 col-xs-12">
 								<div class="about-features">
-
 									<!-- Feature block 1 -->
 									<div class="feature-box feature-box-primary">
 										<i class="icon-screen-desktop"></i> <!-- icon -->
 										<p>User-friendly Interface</p>
 									</div>
-
 									<!-- Feature block 2 -->
 									<div class="feature-box feature-box-second">
 										<i class="icon-briefcase"></i> <!-- icon -->
 										<p>Fits Multiple Industries</p>
 									</div>
-
 									<!-- Feature block 3 -->
 									<div class="feature-box feature-box-second">
 										<i class="icon-equalizer"></i> <!-- icon -->
 										<p>Full UI Customization</p>
 									</div>
-
 									<!-- Feature block 4 -->
 									<div class="feature-box feature-box-primary">
 										<i class="icon-shield"></i> <!-- icon -->
 										<p>HIPPA Compliant</p>
 									</div>
-
 								</div> <!-- .about-features -->
 							</div>
-
 							<div class="col-md-6 col-sm-5 col-xs-12 about-text">
 								<h2>Continuity is the key</h2>
-								<p>Companies who treat every customer as if they have never contacted them before can deteriorate the relationship with customers. However, if employees can refer to phone logs, past e-mails, reminders, etc. when a customer calls it can make all the difference.</p>
-                                <p>Simple data collection will not cut it in today's world. The ability to access customer information and build customer profiles over time is essential. And if your software can do this for you the better. The intrinsic software agents are constantly looking for relationships, parrallels and opportunities to present.</p>
+								<p>Companies who treat every customer as if they have never contacted them before can deteriorate the relationship with customers. However, if employees can refer to
+									phone logs, past e-mails, reminders, etc. when a customer calls it can make all the difference.</p>
+								<p>Simple data collection will not cut it in today's world. The ability to access customer information and build customer profiles over time is essential. And if your
+									software can do this for you the better. The intrinsic software agents are constantly looking for relationships, parrallels and opportunities to present.</p>
 							</div>
-
 						</div> <!-- .row -->
 					</div> <!-- .container -->
 				</section>
 				<!-- End About Block 2 -->
-
 				<!-- Start How to use 1 -->
 				<section id="how-to-use---1" class="container-fluid section-block how-to-use color-block">
 					<div class="container">
 						<div class="row">
-
 							<h2>How To Use</h2>
 							<div class="block-desc">
-								<p>Now, more than ever, companies are investing in customer service tools because inadequate customer contact systems undermine the customer relationship. Effective customer relationship management is only as good as the system it's founded on.
-
-                                </p>
+								<p>Now, more than ever, companies are investing in customer service tools because inadequate customer contact systems undermine the customer relationship. Effective
+									customer relationship management is only as good as the system it's founded on. </p>
 							</div>
-
 							<!-- Block 1 -->
 							<div class="col-md-4 how-to-block">
 								<h3><span class="number"><span>1</span></span>Puchase Package</h3>
 								<p>Once you purchase a package, a representative will contact you to gather information how to properly setup you environment.</p>
 							</div> <!-- .how-to-block -->
-
 							<!-- Block 2 -->
 							<div class="col-md-4 how-to-block">
 								<h3><span class="number"><span>2</span></span>Account Setup</h3>
 								<p>We setup your account once we know how many users, and what systems need integration.</p>
 							</div> <!-- .how-to-block -->
-
 							<!-- Block 3 -->
 							<div class="col-md-4 how-to-block">
 								<h3><span class="number"><span>3</span></span>Customization</h3>
 								<p>Even though it's easy, we'll guide you through the setup and customization process to ensure you're up and running quickly.</p>
 							</div> <!-- .how-to-block -->
-
 						</div> <!-- .row -->
 					</div> <!-- .container -->
 				</section>
 				<!-- End How to use 1 -->
-
 				<!-- Start Prices 2 -->
 				<section id="prices---2" class="container-fluid section-block prices price-2">
 					<div class="container">
 						<div class="row">
-
 							<h2>Prices</h2>
 							<div class="block-desc">
 								<p>Each of products is fully integrated within the suite.</p>
 							</div>
-
 							<!-- Price box 1 -->
 							<div class="col-lg-3 col-sm-6 col-xs-12 price">
 								<div class="border-box">
 									<span class="badge badge-primary">Enterprise</span>
 									<h3>Premium</h3>
-
 									<h4>$2,299 <span>/ per month</span></h4>
-
 									<ul>
 										<li><span>Unlimited</span> Users</li>
 										<li><span>100 GB</span> Upload size</li>
@@ -267,22 +225,16 @@
 										<li>Free Updates</li>
 										<li>Customization</li>
 									</ul>
-
 								</div>
-
 								<div class="price-button">
 									<a href="#" class="button button-full">Get Started</a>
 								</div>
-
 							</div> <!-- .price -->
-
 							<!-- Price box 2 -->
 							<div class="col-lg-3 col-sm-6 col-xs-12 price">
 								<div class="border-box">
 									<h3>Pro</h3>
-
 									<h4>$599 <span>/ per month</span></h4>
-
 									<ul>
 										<li><span>50</span> Users</li>
 										<li><span>70 GB</span> Upload size</li>
@@ -291,22 +243,16 @@
 										<li>Free Updates</li>
 										<li class="disable">Customization</li>
 									</ul>
-
 								</div>
-
 								<div class="price-button">
 									<a href="#" class="button button-full">Get Started</a>
 								</div>
-
 							</div> <!-- .price -->
-
 							<!-- Price box 3 -->
 							<div class="col-lg-3 col-sm-6 col-xs-12 price">
 								<div class="border-box">
 									<h3>Start-Up</h3>
-
 									<h4>$99 <span>/ per month</span></h4>
-
 									<ul>
 										<li><span>5</span> Users</li>
 										<li><span>10 GB</span> Upload size</li>
@@ -315,22 +261,16 @@
 										<li class="disable">Free Updates</li>
 										<li class="disable">Customization</li>
 									</ul>
-
 								</div>
-
 								<div class="price-button">
 									<a href="#" class="button button-full">Get Started</a>
 								</div>
-
 							</div> <!-- .price -->
-
 							<!-- Price box 4 -->
 							<div class="col-lg-3 col-sm-6 col-xs-12 price">
 								<div class="border-box">
 									<h3>Basic</h3>
-
 									<h4>Free <span>/ forever</span></h4>
-
 									<ul>
 										<li><span>1</span> User</li>
 										<li><span>10 GB</span> Upload size</li>
@@ -339,63 +279,31 @@
 										<li class="disable">Free Updates</li>
 										<li class="disable">Customization</li>
 									</ul>
-
 								</div>
-
 								<div class="price-button">
 									<a href="#" class="button button-full">Get Started</a>
 								</div>
-
 							</div> <!-- .price -->
-
 						</div> <!-- .row -->
 					</div> <!-- .container -->
 				</section>
 				<!-- End Prices 2 -->
-
-<!-- Start Download 1 -->
-<section id="download---1" class="container-fluid section-block download-1">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-6 col-xs-12 download-img">
-				<img src="assets/images/taliferro-group-logo.png" alt="Taliferro Group">
-			</div>
-
-			<div class="col-md-6 col-xs-12 download-text">
-				<h2>About Taliferro Group</h2>
-				<p>We offer our expertise as a service and provide SaaS products. Our intention is to create software that is data-aware. We want to create a software products that disappears into the experience. Developing software that performs several business processes together defines a whole new integration — making the boundary between software and business process hard to discern. The machine learning engine is engineered to ascertain the way you work. Separate applications give way to fluidity and transparency. No multiple logins. A single entry point takes you to real-time views of various business aspects. Making processes and data more liquid.</p>
-
-
-			</div>
-
-		</div> <!-- .row -->
-	</div> <!-- .container -->
-</section>
-<!-- End Download 1 -->
-
-
-
-
-
 			</main>
 		</div> <!-- #primary -->
 	</div> <!-- #content -->
-
 	<!-- Start Footer -->
-    <footer id="colophon" class="container-fluid site-footer footer-color">
-        <div class="container footer-container site-top-footer">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 bottom-footer">
-                    <div class="col-md-12 col-sm-12 copy-text">
-                        <p class="text-center">© Copyright Taliferro. Taliferro ® Is Registered In The U.S. Patent And Trademark Office. 425.305.3748. | <a href="https://www.taliferro.com/privacy-policy"
-                                style="color:aliceblue">Privacy Policy</a> | <a href="https://www.taliferro.com/terms-of-service" style="color:aliceblue">Terms of Service</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-	
+	<footer id="colophon" class="container-fluid site-footer footer-color">
+		<div class="container footer-container site-top-footer">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 bottom-footer">
+					<div class="col-md-12 col-sm-12 copy-text">
+						<p class="text-center">© Copyright Taliferro. Taliferro ® Is Registered In The U.S. Patent And Trademark Office. 425.305.3748. | <a
+								href="https://www.taliferro.com/privacy-policy" style="color:aliceblue">Privacy Policy</a> | <a href="https://www.taliferro.com/terms-of-service"
+								style="color:aliceblue">Terms of Service</a>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<!-- End Footer -->
-
 </div>

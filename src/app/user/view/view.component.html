@@ -8,6 +8,11 @@
                               <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onDisplayName()"><i class="fa fa-chevron-right fa-1x"></i></a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.prefix"><strong>Prefix:</strong> {{data.prefix}}</span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="data && !data.prefix">No prefix</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onPrefix()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
                               <span class="p-2" *ngIf="data && data.firstName"><strong>First Name:</strong> {{data.firstName}}</span>
                               <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="data && !data.firstName">No first name</span>
                               <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onFirstName()"><i class="fa fa-chevron-right fa-1x"></i></a>
@@ -25,12 +30,86 @@
                   </ul>
                   <ul class="list-group mb-3">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.companyName"><strong>Company:</strong> {{data.companyName}}</span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="data && !data.companyName">No company</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onCompany()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                  </ul>
+                  <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
                               <span class="p-2" *ngIf="data && data.emails && data.emails.length && (data.emails.length > 0)"><strong>Email:</strong><br>
-                                    <span *ngFor="let e of data.emails; let i = index"> {{i+1}} - <a href="mailto:{{e.emailAddress}}">{{e.emailAddress}}</a> <br>
-                                    </span>
+                                    <div *ngFor="let e of data.emails; let i = index"><a href="mailto:{{e.emailAddress}}">{{e.emailAddress}}</a> 
+                                          <span *ngIf="e.emailAddressType"> ({{e.emailAddressType}})</span>  
+                                    </div>
                               </span>
                               <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="!(data && data.emails && data.emails.length && (data.emails.length > 0))">No email addresses</span>
                               <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onEmailAddress()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                  </ul>
+                  <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.addresses && data.addresses.length && (data.addresses.length > 0)"><strong>Address:</strong><br>
+                                    <div *ngFor="let e of data.addresses; let i = index" class="mb-2">{{e.streetAddress1}} {{e.streetAddress2}} <br>{{e.city}} {{e.province}} {{e.zipCode}} 
+                                          <span *ngIf="e.addressType"><br>({{e.addressType}})</span> </div>
+                              </span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="!(data && data.addresses && data.addresses.length && (data.addresses.length > 0))">No street
+                                    addresses</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onAddress()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                  </ul>
+                  <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.dob"><strong>Date of Birth:</strong> {{data.dob}}</span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="data && !data.dob">No date of birth</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onBirthday()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.gender"><strong>Gender:</strong> {{data.gender}}</span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="data && !data.gender">No gender</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onGender()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.profession"><strong>Profession:</strong> {{data.profession}}</span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="data && !data.profession">No profession</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onProfession()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.status"><strong>Status:</strong> {{data.status}}</span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="data && !data.status">No status</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onStatus()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.profileType"><strong>Profile Type:</strong> {{data.profileType}}</span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="data && !data.profileType">No profile type</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onProfileType()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                  </ul>
+                  <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.socialMedia && data.socialMedia.length && (data.socialMedia.length > 0)"><strong>Social Media:</strong><br>
+                                    <div *ngFor="let e of data.socialMedia; let i = index" class="mb-2"><a href="{{e.url}}">{{e.url}}</a>  </div>
+                              </span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="!(data && data.socialMedia && data.socialMedia.length && (data.socialMedia.length > 0))">No social
+                                    media</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onSocialMedia()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                  </ul>
+                  <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.phones && data.phones.length && (data.phones.length > 0)"><strong>Phones:</strong><br>
+                                    <div *ngFor="let e of data.phones; let i = index" class="mb-2">{{e.phoneNumber}} <span *ngIf="e.phoneType"> ({{e.phoneType}})</span> </div>
+                              </span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="!(data && data.phones && data.phones.length && (data.phones.length > 0))">No phone numbers</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onPhone()"><i class="fa fa-chevron-right fa-1x"></i></a>
+                        </li>
+                  </ul>
+                  <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span class="p-2" *ngIf="data && data.notes && data.notes.length && (data.notes.length > 0)"><strong>Notes:</strong><br>
+                                    <div *ngFor="let e of data.notes; let i = index" class="mb-2">{{e.text}} </div>
+                              </span>
+                              <span class="p-2 text-secondary text-opacity-25 fst-italic" *ngIf="!(data && data.notes && data.notes.length && (data.notes.length > 0))">No notes</span>
+                              <a class="text-secondary text-opacity-25" style="cursor: pointer;" (click)="onNotes()"><i class="fa fa-chevron-right fa-1x"></i></a>
                         </li>
                   </ul>
                   <ul class="list-group mb-3">

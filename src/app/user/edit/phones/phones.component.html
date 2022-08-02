@@ -1,0 +1,65 @@
+<form #dataForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="containter-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="text-capitalize">Email Address</h4>
+            </div>
+            <div class="card-body">
+                <div class="row mb-2">
+                    <div class="col">
+                        <div class="form-group">
+                            <input [(ngModel)]="phone.countryCode" type="tel" name="countryCode" id="countryCode" class="form-control form-control-lg" placeholder="Country Code">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col">
+                        <div class="form-group">
+                            <input [(ngModel)]="phone.phoneNumber" type="tel" name="phoneNumber" id="phoneNumber" class="form-control form-control-lg" required autofocus placeholder="Phone Number">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col">
+                        <div class="form-group">
+                            <select [(ngModel)]="phone.phoneType" type="tel" name="phoneType" id="phoneType" class="form-control form-control-lg">
+                                <option value="" selected disabled hidden>Choose Phone Type</option>
+                                <option *ngFor="let p of phoneTypes; let i = index" value="{{p}}">{{p}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-primary"
+                            [disabled]="!dataForm.form.valid">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="card" *ngIf="(data.phones && ((data.phones)?.length != 0)) else nodata">
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <th> # </th>
+                <th> Phone Number </th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let d of data.phones; let i = index">
+                    <td>{{i+1}}</td>
+                    <td style="cursor: pointer;" (click)="editPhone(i)">{{d?.phoneNumber}}</td>
+                    <td style="cursor: pointer;" (click)="removePhone(i)"><i class="fa fa-trash" aria-hidden="true"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<ng-template #nodata>
+    <div class="alert alert-info text-center" role="alert">
+        <h4>No phone numbers found</h4>
+    </div>
+</ng-template>

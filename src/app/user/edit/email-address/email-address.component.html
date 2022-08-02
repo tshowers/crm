@@ -8,7 +8,17 @@
                 <div class="row mb-2">
                     <div class="col">
                         <div class="form-group">
-                            <input [(ngModel)]="emailAddress" type="email" name="emailAddress" id="emailAddress" class="form-control form-control-lg" required autofocus>
+                            <input [(ngModel)]="emailAddress.emailAddress" type="email" name="emailAddress" id="emailAddress" class="form-control form-control-lg" required autofocus>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col">
+                        <div class="form-group">
+                            <select [(ngModel)]="emailAddress.emailAddressType" type="tel" name="emailAddressType" id="emailAddressType" class="form-control form-control-lg">
+                                <option value="" selected disabled hidden>Choose Email Address Type</option>
+                                <option *ngFor="let p of emailTypes; let i = index" value="{{p}}">{{p}}</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -46,6 +56,3 @@
         <h4>No email addresses found</h4>
     </div>
 </ng-template>
-<pre>
-    {{ data | json}}
-</pre>

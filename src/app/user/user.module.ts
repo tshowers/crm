@@ -12,6 +12,18 @@ import { LastNameComponent } from './edit/last-name/last-name.component';
 import { MiddleNameComponent } from './edit/middle-name/middle-name.component';
 import { ContactFilterPipe } from './contact-filter.pipe';
 import { EmailAddressComponent } from './edit/email-address/email-address.component';
+import { AddressComponent } from './edit/address/address.component';
+import { ProfileTypeComponent } from './edit/profile-type/profile-type.component';
+import { ProfessionComponent } from './edit/profession/profession.component';
+import { StatusComponent } from './edit/status/status.component';
+import { BirthdayComponent } from './edit/birthday/birthday.component';
+import { GenderComponent } from './edit/gender/gender.component';
+import { PrefixComponent } from './edit/prefix/prefix.component';
+import { SocialMediaComponent } from './edit/social-media/social-media.component';
+import { PhonesComponent } from './edit/phones/phones.component';
+import { NotesComponent } from './edit/notes/notes.component';
+import { CompanyComponent } from './edit/company/company.component';
+import { AttachmentsComponent } from './edit/attachments/attachments.component';
 
 
 
@@ -26,7 +38,19 @@ import { EmailAddressComponent } from './edit/email-address/email-address.compon
     LastNameComponent,
     MiddleNameComponent,
     ContactFilterPipe,
-    EmailAddressComponent
+    EmailAddressComponent,
+    AddressComponent,
+    ProfileTypeComponent,
+    ProfessionComponent,
+    StatusComponent,
+    BirthdayComponent,
+    GenderComponent,
+    PrefixComponent,
+    SocialMediaComponent,
+    PhonesComponent,
+    NotesComponent,
+    CompanyComponent,
+    AttachmentsComponent
   ],
   imports: [
     CommonModule,

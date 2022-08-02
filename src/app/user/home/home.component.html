@@ -32,7 +32,18 @@
             <app-middle-name [data]="data" *ngIf="isMiddleName" (done)="editReset()"></app-middle-name>
             <app-last-name [data]="data" *ngIf="isLastName" (done)="editReset()"></app-last-name>
             <app-email-address [data]="data" *ngIf="isEmail" (done)="editReset()"></app-email-address>
-            <pre class="text-light bg-dark p-4" *ngIf="isDiagnostic">
+            <app-status *ngIf="isStatus" [data]="data" (done)="editReset()"></app-status>
+            <app-social-media *ngIf="isSocialMedia" [data]="data" (done)="editReset()"></app-social-media>
+            <app-profile-type *ngIf="isProfileType" [data]="data" (done)="editReset()"></app-profile-type>
+            <app-profession *ngIf="isProfession" [data]="data" (done)="editReset()"></app-profession>
+            <app-prefix *ngIf="isPrefix" [data]="data" (done)="editReset()"></app-prefix>
+            <app-phones *ngIf="isPhone" [data]="data" (done)="editReset()"></app-phones>
+            <app-notes *ngIf="isNote" [data]="data" (done)="editReset()"></app-notes>
+            <app-gender *ngIf="isGender" [data]="data" (done)="editReset()"></app-gender>
+            <app-company *ngIf="isCompany" [data]="data" (done)="editReset()"></app-company>
+            <app-birthday *ngIf="isBirthday" [data]="data" (done)="editReset()"></app-birthday>
+            <app-address *ngIf="isAddress" [data]="data" (done)="editReset()"></app-address>
+            <pre *ngIf="isDiagnostic">
                 {{data | json}}
             </pre>
         </div>

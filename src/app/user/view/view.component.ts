@@ -9,7 +9,7 @@ export class ViewComponent implements OnInit {
 
   @Input() data: any;
   @Input() isDiagnostic: boolean = false;
-  @Output() editItem=  new EventEmitter();
+  @Output() editItem = new EventEmitter();
 
   constructor() { }
 
@@ -34,6 +34,50 @@ export class ViewComponent implements OnInit {
 
   onEmailAddress(): void {
     this.editItem.emit('emailAddress');
+  }
+
+  onStatus(): void {
+    this.editItem.emit('status');
+  }
+
+  onSocialMedia(): void {
+    this.editItem.emit('socialMedia');
+  }
+
+  onProfileType(): void {
+    this.editItem.emit('profileType');
+  }
+
+  onProfession(): void {
+    this.editItem.emit('profession');
+  }
+
+  onPrefix(): void {
+    this.editItem.emit('prefix');
+  }
+
+  onPhone(): void {
+    this.editItem.emit('phone');
+  }
+
+  onNotes(): void {
+    this.editItem.emit('notes');
+  }
+
+  onGender(): void {
+    this.editItem.emit('gender');
+  }
+
+  onCompany(): void {
+    this.editItem.emit('company');
+  }
+
+  onBirthday(): void {
+    this.editItem.emit('birthday');
+  }
+
+  onAddress(): void {
+    this.editItem.emit('address');
   }
 
   setDiagnostic(): void {
