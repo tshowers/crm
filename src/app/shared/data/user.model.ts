@@ -5,4 +5,7 @@ export interface User {
     displayName?: string;
     emailVerified?: boolean;
     phoneNumber?: string;
-}
+    roles?: any;
+    lastUpdated?: any;
+    browserIp?: any;
+  }

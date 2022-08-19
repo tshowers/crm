@@ -5,15 +5,15 @@
             <input [(ngModel)]="filteredData" type="text" class="form-control" placeholder="Type to filter listing" aria-label="contactName" aria-describedby="basic-addon1">
         </div>
     </div>
-    <div class="card-body">
+    <div class="card-body table-responsive">
         <table class="table table-hover">
             <thead>
                 <th> # </th>
                 <th> ID </th>
                 <th> Dispaly </th>
                 <th> First </th>
-                <th> Middle </th>
-                <th> last </th>
+                <th> Last </th>
+                <th> Status </th>
             </thead>
             <tbody>
                 <tr *ngFor="let data of contactService.items | async | contactFilter:filteredData; let i = index" [ngClass]="{'text-muted' : !data.active}">
@@ -21,8 +21,8 @@
                     <td style="cursor: pointer;" (click)="onView(data)">{{data?._id}}</td>
                     <td style="cursor: pointer;" (click)="onView(data)">{{data?.displayName}}</td>
                     <td style="cursor: pointer;" (click)="onView(data)">{{data?.firstName}}</td>
-                    <td style="cursor: pointer;" (click)="onView(data)">{{data?.middleName}}</td>
                     <td style="cursor: pointer;" (click)="onView(data)">{{data?.lastName}}</td>
+                    <td style="cursor: pointer;" (click)="onView(data)">{{data?.status}}</td>
                 </tr>
             </tbody>
         </table>
