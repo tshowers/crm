@@ -15,7 +15,7 @@ export class ListComponent implements OnInit {
   public filteredData = '';
 
   constructor(public contactService: ContactService) { 
-    this.contactService.getAll();
+    this.contactService.getAllOrphaned();
   }
 
   ngOnInit(): void {
